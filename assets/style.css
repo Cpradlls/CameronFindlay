@@ -1,0 +1,297 @@
+/**/
+/* GENERALE */
+/**/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    color: white;
+    font-family: Roboto;
+
+}
+header {
+    height: 20vh;
+    background-color: rgb(23, 23, 23);
+}
+
+header img {
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 60vw;
+}
+/**/
+/* ACCUEIL */
+/**/
+
+main.accueil {
+    height: 70vh;
+    background-position: center;
+    background-image: url('backgroundNoir.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Dela Gothic One', cursive;
+    display: grid;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+main.accueil > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+main.accueil > a {
+    transition: background-color 100ms,
+                color 100ms;
+    border: .2rem solid #282828;
+  }
+
+  main.accueil > a:hover {
+    border-color: transparent;
+  }
+
+  main.accueil > a:nth-of-type(1):hover {
+    border-color: #0066ff;
+    background-color: #0066ff;
+    color: #193c70;
+  }
+
+  main.accueil > a:nth-of-type(2):hover {
+    border-color: #ff07f3;
+    background-color: #ff07f3;
+    color: #5e0e5a;
+  }
+
+  main.accueil > a:nth-of-type(3):hover {
+    border-color: #ff4907;
+    background-color: #ff4907;
+    color: #993a18;
+  }
+
+
+
+
+
+/**/
+/* PAGE READ */
+/**/
+
+main.Read {
+    background-color: #212121;
+    display: grid;
+    grid-template-areas: 
+    "title add"
+    "conteneur conteneur";
+}
+
+main.Read h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-family: 'Dela Gothic One', cursive;
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0066ff;
+}
+
+main.Read div.add {
+    grid-area: add;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main.Read div.conteneur {
+    grid-area: conteneur;
+}
+
+main.Read a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: inherit;
+    border: .2rem solid #2b2b2b;
+    width: 20vw;
+    background-color: #2b2b2b;
+    height: 7vh;
+    transition: background-color 100ms, color 100ms;
+    color: #ffffff;
+    box-shadow: 11px 10px 21px -5px rgba(0,0,0,0.77);
+}
+
+main.Read a:hover {
+    border: .2rem solid #ff07f3;
+    background-color: #5e0e5a;
+    color: #ff07f3;
+}
+
+main.Read div.conteneur {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "result"
+    "contenu";
+    justify-items: center;
+    width: 100vw;
+}
+
+main.Read div.conteneur div.contenu {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main.Read div.conteneur div.contenu div.SGA {
+    position: relative;
+    border: .2rem solid #282828;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+main.Read div.conteneur div.contenu div.SGA form input {
+    background-color: #282828;
+    border: solid 2px #545454;
+    border-radius: 2rem;
+    padding: 5px;
+    color: #c6c6c6;
+    margin-top: 2vh;
+}
+
+main.Read div.conteneur div.contenu div.SGA form input:hover {
+    border: .2rem solid #3407ff;
+    background-color: #1f0981;
+    color: #3407ff;
+}
+
+main.Read div.conteneur div.resultat {
+    grid-area: result;
+}
+
+
+
+/**/
+/* PAGE ADD */
+/**/
+
+main.add {
+    background-color: #212121;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "contenu"
+    "resultat";
+    height: 70vh;
+    justify-items: center;
+}
+
+main.add h1 {
+    grid-area: title;
+    font-family: 'Dela Gothic One', cursive;
+    color: #0066ff; 
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+main.add div.conteneur_ajout {
+    grid-area: contenu;
+    background-color: #393939;
+    border-radius: 2rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 50vw;
+    height: 40vh;
+    padding-bottom: 6vh;
+    padding-top: 6vh;
+}
+
+main.add div.conteneur_ajout div.choix_Style {
+    height: 15vh;
+    overflow-y: scroll;
+}
+
+main.add div.resultat {
+    grid-area: resultat;
+}
+
+
+
+/**/
+/* PAGE UPDATE / DELETE */
+/**/
+main.upDe {
+    background-color: #212121;
+    display: grid;
+    height: 70vh;
+    justify-items: center;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+main.upDe h1 {
+    font-family: 'Dela Gothic One', cursive;
+    color: #0066ff; 
+}
+
+main.upDe > div.resultat {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+main.upDe > div.resultat a.btnBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: inherit;
+    border: .2rem solid #2b2b2b;
+    width: 20vw;
+    background-color: #2b2b2b;
+    height: 7vh;
+    transition: background-color 100ms, color 100ms;
+    color: #ffffff;
+    box-shadow: 11px 10px 21px -5px rgba(0,0,0,0.77);
+}
+
+main.upDe > div.resultat a.btnBack:hover {
+    border: .2rem solid #ff4907;
+    background-color: #993a18;
+    color: #ff4907;
+}
+
+
+
+
+/**/
+/* FOOTER */
+/**/
+footer {
+    color: #545454;
+    height: 10vh;
+    background-color: rgb(23, 23, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
